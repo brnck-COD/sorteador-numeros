@@ -147,5 +147,62 @@ button:disabled {
 
     h1 {
         font-size: 50px;
+    }/* --- Estilos para Telas Menores (Ex: Smartphones - até 768px de largura) --- */
+@media (max-width: 768px) {
+    body {
+        font-size: 16px; /* Ajusta o tamanho da fonte base para mobile */
     }
+
+    .container {
+        width: 95%; /* Ocupa mais largura da tela em dispositivos menores */
+        padding: 20px;
+        margin: 20px auto; /* Mantém centralizado e com margem */
+    }
+
+    h1 {
+        font-size: 2em; /* Diminui o tamanho do título principal */
+        margin-bottom: 15px;
+    }
+
+    .container__campos {
+        flex-direction: column; /* Coloca os campos em coluna em telas menores */
+        gap: 15px; /* Espaçamento entre os campos */
+    }
+
+    .container__input {
+        width: 100%; /* Faz os inputs ocuparem a largura total */
+        font-size: 1em; /* Ajusta a fonte dos inputs */
+        padding: 10px;
+    }
+
+    .container__botao {
+        width: 100%; /* Faz os botões ocuparem a largura total */
+        padding: 12px;
+        font-size: 1.1em;
+        margin-top: 15px;
+    }
+
+    .texto__paragrafo {
+        font-size: 1.1em; /* Ajusta o tamanho do texto de resultado */
+        margin-top: 20px;
+    }
+
+    /* Se você tiver um footer, ajuste-o também */
+    footer {
+        font-size: 0.9em;
+        padding: 15px 10px;
+    }
+}
+
+/* --- Estilos para Telas AINDA Menores (Ex: Smartphones pequenos - até 480px de largura) --- */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8em;
+    }
+
+    .container__input,
+    .container__botao {
+        font-size: 1em;
+    }
+}
 }
