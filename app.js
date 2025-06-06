@@ -2,10 +2,27 @@ function sortear(){
     let quantidade = parseInt(document.getElementById('quantidade').value);
     let de = parseInt(document.getElementById('de').value); 
     let ate = parseInt(document.getElementById('ate').value);
-    
+  
+    if (de > ate) {
+        alert("Erro: O valor do campo 'Do número' não pode ser maior que o valor do campo 'Até o número'. Por favor, revise seus dados.");
+        return;
+    }
+
+    let intervaloDisponivel = ate - de + 1;
+    if (quantidade > intervaloDisponivel) {
+        alert("Erro: A quantidade de números a sortear é maior que o intervalo disponível entre 'Do número' e 'Até o número'. Por favor, ajuste a quantidade.");
+        return; 
+    }
+
+    if (quantidade <= 0 || de < 0 || ate < 0) { 
+        alert("Erro: Por favor, insira valores positivos e válidos para o sorteio.");
+        return;
+    }
+
     let sorteados = [];
     let numero;
-    
+  
+
     for (let i = 0; i < quantidade; i++) {
         numero = nmrAleatorio(de, ate);
 
